@@ -24,6 +24,7 @@ def add_sample_data():
             Item(name='Item 1', description='Description for Item 1'),
             Item(name='Item 2', description='Description for Item 2'),
             Item(name='Item 3', description='Description for Item 3'),
+            Item(name='Item 3', description='Description for Item 4')
         ]
         db.session.bulk_save_objects(sample_items)  # Thêm nhiều đối tượng
         db.session.commit()  # Lưu thay đổi vào cơ sở dữ liệu
