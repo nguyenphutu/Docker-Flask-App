@@ -1,0 +1,10 @@
+version: "4"
+authtoken: "2npivnXMYn42sKHzVwlRrksyUyX_5K5QpDRbB9k6i1UJFim6o"
+web_addr: 0.0.0.0:8081
+update: false
+log: stdout
+
+tunnels:
+  app-foo:
+    addr: localhost:8080
+    proto: http
