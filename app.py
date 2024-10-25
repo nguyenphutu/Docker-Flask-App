@@ -37,6 +37,10 @@ with app.app_context():
     db.create_all()  # Tạo bảng nếu chưa tồn tại
     add_sample_data()  # Thêm dữ liệu mẫu
 
+@app.route('/')
+def home():
+    return jsonify({'message': 'Hello, CI/CD with Jenkins and Docker!'})
+
 # Route to get items
 @app.route('/items')
 def get_items():
