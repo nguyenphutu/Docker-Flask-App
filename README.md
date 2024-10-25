@@ -49,10 +49,15 @@ Nhập thông tin và copy Private key từ container Jenkins vào.
 cat ~/.ssh/id_rsa
 ```
 
-## 2: Cấu hình github webhook
+2.4 Tạo Jenkins pipeline project
+- Tại Configure chọn Build Triggers => GitHub hook trigger for GITScm polling
+- Pipeline from SCM git: https://github.com/nguyenphutu/Docker-Flask-App.git
+
+## 3: Cấu hình github webhook
 - Tại repo quản lý source trên github chọn Setting -> webhook
 - Nhập địa chỉ public của Jenkins vào: Lấy địa chỉ public từ container ngrok
 ```
 docker exec -it ngrok-container-id bash
 ```
 Sau khi cấu hình xong, các thay đổi từ source code sẽ được Jenkin nhận và rebuild lại web.
+
