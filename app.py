@@ -47,5 +47,9 @@ def get_items():
     items = Item.query.all()
     return jsonify([{'id': item.id, 'name': item.name} for item in items])
 
+@app.route('/status')
+def status():
+    return jsonify({'status': 'App is running smoothly!'})
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
