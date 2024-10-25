@@ -18,7 +18,7 @@ pipeline {
                     sh 'scp -r /var/jenkins_home/workspace/Docker-Flask-App/docker-compose.yml fuufuu@172.17.0.1:~/repo_git/Docker-Flask-App/'
                     sh 'scp -r /var/jenkins_home/workspace/Docker-Flask-App/ngrok.yml fuufuu@172.17.0.1:~/repo_git/Docker-Flask-App/'
                     sh 'scp -r /var/jenkins_home/workspace/Docker-Flask-App/requirements.txt fuufuu@172.17.0.1:~/repo_git/Docker-Flask-App/'
-                    sh 'ssh fuufuu@172.17.0.1 "cd ~/repo_git/Docker-Flask-App && docker compose down && docker compose up"'
+                    sh 'ssh fuufuu@172.17.0.1 "cd ~/repo_git/Docker-Flask-App && docker-compose up --build --force-recreate"'
                 }
             }
         }
