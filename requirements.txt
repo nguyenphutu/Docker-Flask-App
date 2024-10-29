@@ -3,3 +3,4 @@ SQLAlchemy==1.4.22
 psycopg2==2.9.1  # Nếu bạn dùng PostgreSQL
 Werkzeug==2.0.3
 Flask-SQLAlchemy==2.5.1
+pytest==7.4.0
