@@ -11,6 +11,16 @@ pipeline {
                 git 'https://github.com/nguyenphutu/Docker-Flask-App.git'
             }
         }
+		
+		stage('Run Tests') {
+            steps {
+                script {
+                        // Đảm bảo đúng đường dẫn tới thư mục tests
+                        sh 'pytest'
+                    }
+                }
+            }
+        }
         
         stage('SSH to Server') {
             steps {
